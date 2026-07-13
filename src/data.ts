@@ -7,7 +7,7 @@ export const HERO_DATA = {
   subheadline: "From Lagos to the world — helping African fintechs and global SaaS companies scale revenue through psychology-driven UX, performant interfaces, and conversion-first design systems.",
   primaryCta: "Hire Me to Scale",
   secondaryCta: "View Selected Impact",
-  profileImage: "https://images.unsplash.com/photo-1759752393978-92d3ccf09380?auto=format&fit=crop&q=80&w=600",
+  profileImage: "https://images.unsplash.com/photo-1532076904124-d4e8fe7fbbec?auto=format&fit=crop&q=80&w=600",
   heroGraphic: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200",
   whatsapp: "2348030001122",
   twitter: "https://x.com/chioma_codes",

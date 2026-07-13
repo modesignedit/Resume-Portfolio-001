@@ -1,0 +1,20 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0a0a0a"/>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1200" y2="630">
+      <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0a0a0a" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <text x="80" y="240" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="64" fill="white">Chioma Adebayo</text>
+  <text x="80" y="310" font-family="Inter, system-ui, sans-serif" font-weight="500" font-size="28" fill="#a3a3a3">UI/UX &amp; Conversion Architect — Lagos</text>
+  <text x="80" y="370" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="22" fill="#818cf8">I Build Digital Products That Convert.</text>
+  <line x1="80" y1="410" x2="400" y2="410" stroke="#4f46e5" stroke-width="3" stroke-linecap="round"/>
+  <text x="80" y="470" font-family="Inter, system-ui, sans-serif" font-weight="400" font-size="18" fill="#737373">From Lagos to the world — helping African fintechs</text>
+  <text x="80" y="500" font-family="Inter, system-ui, sans-serif" font-weight="400" font-size="18" fill="#737373">and global SaaS companies scale revenue through UX.</text>
+  <rect x="80" y="540" width="200" height="48" rx="24" fill="#4f46e5"/>
+  <text x="180" y="572" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="16" fill="white" text-anchor="middle">Hire Me to Scale</text>
+  <circle cx="1040" cy="220" r="140" fill="#1f1f1f"/>
+  <circle cx="1040" cy="220" r="130" fill="#2e2e2e" opacity="0.5"/>
+</svg>
