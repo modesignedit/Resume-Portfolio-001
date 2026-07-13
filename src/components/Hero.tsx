@@ -39,7 +39,7 @@ export default function Hero({ settings, onCtaClick, onViewWorkClick }: HeroProp
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 md:gap-12 lg:gap-16 items-center">
           
           {/* Left Column: Conversion Copy & Hook */}
           <motion.div

@@ -28,7 +28,7 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
         </div>
 
         {/* 3-Card Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8" id="testimonials-grid">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="testimonials-grid">
           {testimonials.map((testimonial, idx) => (
             <motion.div
               key={testimonial.id}

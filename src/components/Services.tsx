@@ -43,7 +43,7 @@ export default function Services({ services, onServiceSelect }: ServicesProps) {
         </div>
 
         {/* 3-Column Responsive Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8" id="services-grid">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
           {services.map((service, idx) => (
             <motion.div
               key={service.id}
