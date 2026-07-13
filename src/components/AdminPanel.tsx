@@ -520,10 +520,10 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
             A
           </div>
           <div>
-            <span className="font-sans font-black text-xs sm:text-base tracking-tight text-white flex items-center gap-1.5">
-              AUTHOR WORKSPACE <span className="hidden xs:inline px-1.5 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[8px] font-mono font-normal tracking-widest text-indigo-400">v2.6</span>
-            </span>
-            <p className="text-[9px] sm:text-[10px] text-neutral-500 font-mono uppercase tracking-wider line-clamp-1">PORTFOLIO & LEADS ENGINE</p>
+      <span className="font-sans font-black text-xs sm:text-base tracking-tight text-white flex items-center gap-1.5">
+        AUTHOR WORKSPACE <span className="hidden sm:inline px-1.5 py-0.5 rounded bg-neutral-900 border border-neutral-800 text-[8px] font-mono font-normal tracking-widest text-indigo-400">v2.6</span>
+      </span>
+      <p className="hidden sm:block text-[9px] sm:text-[10px] text-neutral-500 font-mono uppercase tracking-wider line-clamp-1">PORTFOLIO & LEADS ENGINE</p>
           </div>
         </div>
 
@@ -555,8 +555,8 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
             className="px-3 sm:px-4 py-2 rounded-xl bg-neutral-900 border border-neutral-800 hover:bg-neutral-800 text-neutral-200 font-sans font-semibold text-xs transition-colors flex items-center cursor-pointer group shrink-0"
           >
             <Eye className="w-3.5 h-3.5 sm:mr-1.5 group-hover:text-indigo-400 shrink-0" />
-            <span className="hidden xs:inline">Visitor View</span>
-            <span className="inline xs:hidden">Exit</span>
+            <span className="hidden sm:inline">Visitor View</span>
+            <span className="inline sm:hidden">Exit</span>
           </button>
         </div>
       </header>
@@ -1193,7 +1193,7 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
                       <button
                         type="submit"
                         disabled={savingField === 'settings'}
-                        className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 disabled:bg-indigo-800 text-white font-sans font-bold text-xs shadow-lg transition-all cursor-pointer"
+                        className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 disabled:bg-indigo-800 text-white font-sans font-bold text-xs shadow-lg transition-all cursor-pointer"
                       >
                         {savingField === 'settings' ? 'Persisting changes...' : 'Save Settings Changes'}
                         <Save className="w-3.5 h-3.5 ml-1.5" />
@@ -1214,10 +1214,10 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
                       
                       <button
                         onClick={() => setShowAddService(!showAddService)}
-                        className="inline-flex items-center px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-sans font-bold transition-colors cursor-pointer"
+                        className="inline-flex items-center p-2 sm:px-4 sm:py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-sans font-bold transition-colors cursor-pointer"
                       >
-                        <Plus className="w-4 h-4 mr-1.5" />
-                        Add Service Package
+                        <Plus className="w-4 h-4 sm:mr-1.5" />
+                        <span className="hidden sm:inline">Add Service Package</span>
                       </button>
                     </div>
 
@@ -1294,7 +1294,7 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
 
                           <button
                             type="submit"
-                            className="inline-flex items-center px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold transition-all cursor-pointer"
+                            className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold transition-all cursor-pointer"
                           >
                             Add Service Package
                             <CheckCircle2 className="w-3.5 h-3.5 ml-1.5" />
@@ -1347,10 +1347,10 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
 
                       <button
                         onClick={() => setShowAddProject(!showAddProject)}
-                        className="inline-flex items-center px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-sans font-bold transition-colors cursor-pointer"
+                        className="inline-flex items-center p-2 sm:px-4 sm:py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-sans font-bold transition-colors cursor-pointer"
                       >
-                        <PlusCircle className="w-4 h-4 mr-1.5" />
-                        Add Portfolio Case Study
+                        <PlusCircle className="w-4 h-4 sm:mr-1.5" />
+                        <span className="hidden sm:inline">Add Case Study</span>
                       </button>
                     </div>
 
@@ -1475,7 +1475,7 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
 
                           <button
                             type="submit"
-                            className="inline-flex items-center px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold transition-all cursor-pointer"
+                            className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold transition-all cursor-pointer"
                           >
                             Build Case Study
                             <CheckCircle2 className="w-3.5 h-3.5 ml-1.5" />
@@ -1541,10 +1541,10 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
 
                       <button
                         onClick={() => setShowAddTestimonial(!showAddTestimonial)}
-                        className="inline-flex items-center px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-sans font-bold transition-colors cursor-pointer"
+                        className="inline-flex items-center p-2 sm:px-4 sm:py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-sans font-bold transition-colors cursor-pointer"
                       >
-                        <Plus className="w-4 h-4 mr-1.5" />
-                        Add Partner Review
+                        <Plus className="w-4 h-4 sm:mr-1.5" />
+                        <span className="hidden sm:inline">Add Review</span>
                       </button>
                     </div>
 
@@ -1635,7 +1635,7 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
 
                           <button
                             type="submit"
-                            className="inline-flex items-center px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold transition-all cursor-pointer"
+                            className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold transition-all cursor-pointer"
                           >
                             Incorporate Partner Review
                             <CheckCircle2 className="w-3.5 h-3.5 ml-1.5" />
