@@ -126,7 +126,7 @@ function MobileImageUpload({ id, value, onChange, label }: MobileImageUploadProp
                     src={value} 
                     alt="Uploaded preview" 
                     className="w-full h-full object-cover" 
-                    referrerPolicy="no-referrer"
+                    referrerPolicy="no-referrer-when-downgrade"
                   />
                   {value.startsWith('data:') && (
                     <span className="absolute bottom-1.5 right-1.5 px-1.5 py-0.5 rounded bg-indigo-600 text-[8px] font-mono text-white">
@@ -1492,7 +1492,7 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
                           className="p-4 rounded-2xl bg-neutral-900/20 border border-neutral-800 flex flex-col space-y-3"
                         >
                           <div className="aspect-[16/9] w-full rounded-xl overflow-hidden bg-neutral-950 border border-neutral-900">
-                            <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                            <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover" referrerPolicy="no-referrer-when-downgrade" />
                           </div>
 
                           <div className="flex justify-between items-start">
@@ -1668,7 +1668,7 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
                           </div>
 
                           <div className="flex items-center space-x-3 pt-4 border-t border-neutral-900/60">
-                            <img src={test.clientAvatar} alt={test.clientName} className="w-8 h-8 rounded-full object-cover" referrerPolicy="no-referrer" />
+                            <img src={test.clientAvatar} alt={test.clientName} className="w-8 h-8 rounded-full object-cover" referrerPolicy="no-referrer-when-downgrade" />
                             <div>
                               <p className="text-xs font-bold text-white">{test.clientName}</p>
                               <p className="text-[9px] font-mono text-neutral-500">{test.clientRole}, {test.clientCompany}</p>

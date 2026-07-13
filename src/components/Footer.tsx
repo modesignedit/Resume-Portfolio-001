@@ -41,7 +41,7 @@ export default function Footer({ name, settings }: FooterProps) {
               <a
                 href={settings.linkedin}
                 target="_blank"
-                referrerPolicy="no-referrer"
+                referrerPolicy="no-referrer-when-downgrade"
                 rel="noopener noreferrer"
                 className="w-11 h-11 inline-flex items-center justify-center text-neutral-500 hover:text-indigo-400 transition-colors rounded-lg hover:bg-neutral-900"
                 aria-label="LinkedIn"
@@ -55,7 +55,7 @@ export default function Footer({ name, settings }: FooterProps) {
               <a
                 href={`https://wa.me/${settings.whatsapp.replace(/[^0-9]/g, '')}`}
                 target="_blank"
-                referrerPolicy="no-referrer"
+                referrerPolicy="no-referrer-when-downgrade"
                 rel="noopener noreferrer"
                 className="w-11 h-11 inline-flex items-center justify-center text-neutral-500 hover:text-green-400 transition-colors rounded-lg hover:bg-neutral-900"
                 aria-label="WhatsApp"
@@ -69,7 +69,7 @@ export default function Footer({ name, settings }: FooterProps) {
               <a
                 href={settings.twitter}
                 target="_blank"
-                referrerPolicy="no-referrer"
+                referrerPolicy="no-referrer-when-downgrade"
                 rel="noopener noreferrer"
                 className="w-11 h-11 inline-flex items-center justify-center text-neutral-500 hover:text-white transition-colors rounded-lg hover:bg-neutral-900"
                 aria-label="Twitter / X"
@@ -82,7 +82,7 @@ export default function Footer({ name, settings }: FooterProps) {
             <a
               href="https://github.com"
               target="_blank"
-              referrerPolicy="no-referrer"
+              referrerPolicy="no-referrer-when-downgrade"
               rel="noopener noreferrer"
               className="w-11 h-11 inline-flex items-center justify-center text-neutral-500 hover:text-indigo-400 transition-colors rounded-lg hover:bg-neutral-900"
               aria-label="GitHub"

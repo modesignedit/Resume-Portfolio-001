@@ -62,7 +62,7 @@ export default function Portfolio({ projects, onCtaClick }: PortfolioProps) {
                   src={project.imageUrl}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                  referrerPolicy="no-referrer"
+                  referrerPolicy="no-referrer-when-downgrade"
                 />
 
                 {/* Ambient vignette */}

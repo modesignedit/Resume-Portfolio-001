@@ -65,7 +65,7 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
                   src={testimonial.clientAvatar}
                   alt={testimonial.clientName}
                   className="w-10 h-10 rounded-full object-cover border border-neutral-800 group-hover:border-indigo-500/30 transition-colors"
-                  referrerPolicy="no-referrer"
+                  referrerPolicy="no-referrer-when-downgrade"
                 />
                 <div>
                   <h4 className="font-sans font-bold text-sm text-white">

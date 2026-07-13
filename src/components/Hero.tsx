@@ -145,7 +145,7 @@ export default function Hero({ settings, onCtaClick, onViewWorkClick }: HeroProp
                     <a
                       href={`https://wa.me/${settings.whatsapp.replace(/[^0-9]/g, '')}`}
                       target="_blank"
-                      referrerPolicy="no-referrer"
+                      referrerPolicy="no-referrer-when-downgrade"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-900 hover:bg-neutral-850 border border-neutral-800 text-neutral-300 hover:text-green-400 transition-all hover:border-green-500/20"
                       title="WhatsApp Chat"
@@ -159,7 +159,7 @@ export default function Hero({ settings, onCtaClick, onViewWorkClick }: HeroProp
                     <a
                       href={settings.linkedin}
                       target="_blank"
-                      referrerPolicy="no-referrer"
+                      referrerPolicy="no-referrer-when-downgrade"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-900 hover:bg-neutral-850 border border-neutral-800 text-neutral-300 hover:text-indigo-400 transition-all hover:border-indigo-500/20"
                       title="LinkedIn Profile"
@@ -173,7 +173,7 @@ export default function Hero({ settings, onCtaClick, onViewWorkClick }: HeroProp
                     <a
                       href={settings.twitter}
                       target="_blank"
-                      referrerPolicy="no-referrer"
+                      referrerPolicy="no-referrer-when-downgrade"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-900 hover:bg-neutral-850 border border-neutral-800 text-neutral-300 hover:text-white transition-all hover:border-neutral-700"
                       title="Twitter / X Profile"
@@ -202,7 +202,7 @@ export default function Hero({ settings, onCtaClick, onViewWorkClick }: HeroProp
                   src={settings.profileImage}
                   alt={`${settings.name} - UI/UX Architect Portrait`}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
+                  referrerPolicy="no-referrer-when-downgrade"
                 />
                 <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-sm border border-neutral-800 px-2.5 py-1.5 rounded-lg text-xs font-sans text-neutral-200">
                   <p className="font-bold">{settings.name}</p>
