@@ -1,0 +1,8 @@
+{
+  "name": "Resume & Portfolio",
+  "description": "A premium, conversion-focused single-page resume and portfolio landing page designed to turn cold visitors into high-paying clients.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
