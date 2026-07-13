@@ -90,7 +90,7 @@ export default function Navbar({ name, onCtaClick, onAdminToggle, theme, onToggl
           {onToggleTheme && (
             <button
               onClick={onToggleTheme}
-              className="p-2 rounded-lg bg-neutral-900 border border-neutral-800 text-indigo-400 hover:text-indigo-300 hover:border-indigo-500/40 hover:bg-indigo-950/20 shadow-sm shadow-indigo-500/5 transition-all cursor-pointer"
+              className="p-2 rounded-lg bg-indigo-600 text-neutral-50 hover:bg-indigo-500 shadow-sm shadow-indigo-500/20 transition-all cursor-pointer"
               title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
             >
               {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
@@ -176,7 +176,7 @@ export default function Navbar({ name, onCtaClick, onAdminToggle, theme, onToggl
                   onToggleTheme();
                   setIsOpen(false);
                 }}
-                className="w-full flex items-center justify-center space-x-2 py-3 px-4 rounded-xl bg-indigo-950/20 border border-indigo-900/40 text-indigo-400 hover:text-indigo-300 hover:bg-indigo-950/40 font-semibold text-xs transition-all cursor-pointer"
+                className="w-full flex items-center justify-center space-x-2 py-3 px-4 rounded-xl bg-indigo-600 text-neutral-50 hover:bg-indigo-500 font-semibold text-xs transition-all cursor-pointer"
               >
                 {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
                 <span>{theme === 'dark' ? 'Light Mode' : 'Dark Mode'}</span>
