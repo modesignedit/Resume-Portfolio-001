@@ -1,8 +1,6 @@
-import { useState } from 'react';
 import { motion } from 'motion/react';
-import { HERO_DATA } from '../data';
 import { AuthorSettings } from '../types';
-import { ArrowUpRight, ArrowRight, Sparkles, Image, ShieldCheck, MapPin, MessageCircle, Linkedin, Twitter } from 'lucide-react';
+import { ArrowUpRight, ArrowRight, Sparkles, ShieldCheck, MapPin, MessageCircle, Linkedin, Twitter } from 'lucide-react';
 
 interface HeroProps {
   settings: AuthorSettings;
@@ -11,8 +9,6 @@ interface HeroProps {
 }
 
 export default function Hero({ settings, onCtaClick, onViewWorkClick }: HeroProps) {
-  const [visualMode, setVisualMode] = useState<'portrait' | 'mesh'>('mesh');
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -192,7 +188,7 @@ export default function Hero({ settings, onCtaClick, onViewWorkClick }: HeroProp
 
           </motion.div>
 
-          {/* Right Column: Premium Visual Mockup with Tab Switcher */}
+          {/* Right Column: Portrait */}
           <div className="lg:col-span-5 relative" id="hero-visual-wrapper">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -201,83 +197,17 @@ export default function Hero({ settings, onCtaClick, onViewWorkClick }: HeroProp
               className="relative aspect-square w-full rounded-2xl bg-gradient-to-b from-neutral-900/80 to-neutral-950 border border-neutral-800/80 p-3 shadow-2xl flex flex-col"
               id="hero-visual-container"
             >
-              {/* Selector Bar */}
-              <div className="flex items-center justify-between px-3 py-2 bg-neutral-950/60 border border-neutral-900/80 rounded-xl mb-3 backdrop-blur-sm">
-                <span className="text-xs font-mono font-medium text-neutral-400">visual_system.bin</span>
-                <div className="flex bg-neutral-900 rounded-lg p-0.5 border border-neutral-800/60">
-                  <button
-                    onClick={() => setVisualMode('mesh')}
-                    className={`px-2.5 py-1 text-[10px] font-mono rounded-md transition-all cursor-pointer ${
-                      visualMode === 'mesh'
-                        ? 'bg-indigo-600 text-white shadow-sm'
-                        : 'text-neutral-400 hover:text-white'
-                    }`}
-                  >
-                    3D sculpture
-                  </button>
-                  <button
-                    onClick={() => setVisualMode('portrait')}
-                    className={`px-2.5 py-1 text-[10px] font-mono rounded-md transition-all cursor-pointer ${
-                      visualMode === 'portrait'
-                        ? 'bg-indigo-600 text-white shadow-sm'
-                        : 'text-neutral-400 hover:text-white'
-                    }`}
-                  >
-                    portrait.jpg
-                  </button>
-                </div>
-              </div>
-
-              {/* Graphic Stage */}
               <div className="relative flex-1 rounded-lg overflow-hidden bg-neutral-950 group">
-                {/* 3D mesh view */}
-                {visualMode === 'mesh' && (
-                   <motion.div
-                     key="mesh"
-                     initial={{ opacity: 0 }}
-                     animate={{ opacity: 1 }}
-                     exit={{ opacity: 0 }}
-                     transition={{ duration: 0.4 }}
-                     className="relative w-full h-full flex items-center justify-center cursor-crosshair overflow-hidden"
-                   >
-                     <img
-                       src={settings.heroGraphic}
-                       alt="CRO Fluid Optimization Sculpture"
-                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                       referrerPolicy="no-referrer"
-                     />
-                     {/* Glowing coordinate labels for brutalist aesthetic */}
-                     <div className="absolute top-4 left-4 bg-black/50 backdrop-blur-sm border border-neutral-800 px-2 py-1 rounded text-[9px] font-mono text-indigo-400">
-                       OPTIMIZATION_ENGINE: v2.4
-                     </div>
-                     <div className="absolute bottom-4 right-4 bg-black/50 backdrop-blur-sm border border-neutral-800 px-2 py-1 rounded text-[9px] font-mono text-neutral-400">
-                       CR: 4.82% (+145%)
-                     </div>
-                   </motion.div>
-                )}
-
-                {/* Portrait view */}
-                {visualMode === 'portrait' && (
-                   <motion.div
-                     key="portrait"
-                     initial={{ opacity: 0 }}
-                     animate={{ opacity: 1 }}
-                     exit={{ opacity: 0 }}
-                     transition={{ duration: 0.4 }}
-                     className="relative w-full h-full"
-                   >
-                     <img
-                       src={settings.profileImage}
-                       alt={`${settings.name} - UI/UX Architect Portrait`}
-                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                       referrerPolicy="no-referrer"
-                     />
-                     <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-sm border border-neutral-800 px-2.5 py-1.5 rounded-lg text-xs font-sans text-neutral-200">
-                       <p className="font-bold">{settings.name}</p>
-                       <p className="text-[10px] text-neutral-400 font-mono">CRO & DESIGN LEAD</p>
-                     </div>
-                   </motion.div>
-                )}
+                <img
+                  src={settings.profileImage}
+                  alt={`${settings.name} - UI/UX Architect Portrait`}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-sm border border-neutral-800 px-2.5 py-1.5 rounded-lg text-xs font-sans text-neutral-200">
+                  <p className="font-bold">{settings.name}</p>
+                  <p className="text-[10px] text-neutral-400 font-mono">UI/UX & CONVERSION ARCHITECT</p>
+                </div>
               </div>
             </motion.div>
 
