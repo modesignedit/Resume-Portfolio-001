@@ -3,11 +3,11 @@ import { Shield, Sparkles, Compass, Cpu, Target } from 'lucide-react';
 
 export default function TrustBar() {
   const brands = [
-    { name: "APEX LABS", icon: Cpu },
-    { name: "AETHER SEC", icon: Shield },
-    { name: "SCRIBE AI", icon: Sparkles },
-    { name: "CHRONOS", icon: Target },
-    { name: "NEXUS LDR", icon: Compass }
+    { name: "PAYSWITCH", icon: Cpu },
+    { name: "MONIEPOINT", icon: Shield },
+    { name: "BAMBOO", icon: Sparkles },
+    { name: "FLUTTERWAVE", icon: Target },
+    { name: "KUDA", icon: Compass }
   ];
 
   return (
