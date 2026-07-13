@@ -59,6 +59,8 @@ html {
 [data-theme="light"] .bg-neutral-900\/50 { background-color: #ebebeb; }
 [data-theme="light"] .bg-neutral-950\/98 { background-color: #fafafafa; }
 [data-theme="light"] .text-white { color: #171717; }
+[data-theme="light"] .bg-indigo-600.text-white,
+[data-theme="light"] .bg-indigo-600 .text-white { color: #ffffff; }
 [data-theme="light"] .text-neutral-200 { color: #262626; }
 [data-theme="light"] .text-neutral-300 { color: #404040; }
 [data-theme="light"] .text-neutral-400 { color: #525252; }
