@@ -7,7 +7,7 @@ export const HERO_DATA = {
   subheadline: "From Lagos to the world — helping African fintechs and global SaaS companies scale revenue through psychology-driven UX, performant interfaces, and conversion-first design systems.",
   primaryCta: "Hire Me to Scale",
   secondaryCta: "View Selected Impact",
-  profileImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600",
+  profileImage: "https://images.unsplash.com/photo-1759752393978-92d3ccf09380?auto=format&fit=crop&q=80&w=600",
   heroGraphic: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200",
   whatsapp: "2348030001122",
   twitter: "https://x.com/chioma_codes",
@@ -105,7 +105,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     clientName: "Tunde Balogun",
     clientRole: "VP of Growth & Product",
     clientCompany: "PaySwitch NG",
-    clientAvatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200"
+    clientAvatar: "https://images.unsplash.com/photo-1645395375722-e0a2a672ba6f?auto=format&fit=crop&q=80&w=200"
   },
   {
     id: "test-2",
@@ -114,7 +114,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     clientName: "Yetunde Ogunlesi",
     clientRole: "Founder & CEO",
     clientCompany: "MoniePoint",
-    clientAvatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200"
+    clientAvatar: "https://images.unsplash.com/photo-1677935708008-d2924bc16b4a?auto=format&fit=crop&q=80&w=200"
   },
   {
     id: "test-3",
@@ -123,6 +123,6 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     clientName: "Emeka Nwosu",
     clientRole: "Growth Director",
     clientCompany: "Bamboo",
-    clientAvatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200"
+    clientAvatar: "https://images.unsplash.com/photo-1597245083280-607579e14c58?auto=format&fit=crop&q=80&w=200"
   }
 ];
