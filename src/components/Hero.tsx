@@ -14,18 +14,18 @@ export default function Hero({ settings, onCtaClick, onViewWorkClick }: HeroProp
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.1
+        staggerChildren: 0.08,
+        delayChildren: 0.05
       }
     }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 15 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.25, ease: "easeOut" }
     }
   };
 
@@ -193,7 +193,7 @@ export default function Hero({ settings, onCtaClick, onViewWorkClick }: HeroProp
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
               className="relative aspect-square w-full rounded-2xl bg-gradient-to-b from-neutral-900/80 to-neutral-950 border border-neutral-800/80 p-3 shadow-2xl flex flex-col"
               id="hero-visual-container"
             >

@@ -21,7 +21,13 @@ export default function Portfolio({ projects, onCtaClick }: PortfolioProps) {
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-24 gap-6">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.25, ease: "easeOut" }}
+          className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-24 gap-6"
+        >
           <div className="max-w-xl">
             <div className="px-3 py-1 rounded-full bg-neutral-900 border border-neutral-800 text-[10px] font-mono tracking-widest text-indigo-400 uppercase mb-4 w-fit">
               PROVEN RESULTS
@@ -41,17 +47,17 @@ export default function Portfolio({ projects, onCtaClick }: PortfolioProps) {
             Request Custom Case Study
             <ArrowUpRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </button>
-        </div>
+        </motion.div>
 
         {/* 2x2 Grid of Case Studies */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12" id="portfolio-grid">
           {projects.map((project, idx) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.25, delay: idx * 0.06, ease: "easeOut" }}
               className="group flex flex-col space-y-5"
               id={`portfolio-project-${project.id}`}
             >

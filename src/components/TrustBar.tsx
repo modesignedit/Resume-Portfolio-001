@@ -31,7 +31,7 @@ export default function TrustBar() {
                 key={brand.name}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.1, duration: 0.5 }}
+                transition={{ delay: idx * 0.05, duration: 0.2 }}
                 whileHover={{ scale: 1.05 }}
                 className="flex items-center space-x-2 text-neutral-500 hover:text-neutral-300 transition-colors cursor-pointer group"
                 id={`trust-brand-${brand.name.toLowerCase().replace(/\s/g, '-')}`}

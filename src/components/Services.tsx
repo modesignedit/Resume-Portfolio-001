@@ -30,7 +30,13 @@ export default function Services({ services, onServiceSelect }: ServicesProps) {
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16 md:mb-24 flex flex-col items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.25, ease: "easeOut" }}
+          className="text-center max-w-2xl mx-auto mb-16 md:mb-24 flex flex-col items-center"
+        >
           <div className="px-3 py-1 rounded-full bg-neutral-900 border border-neutral-800 text-[10px] font-mono tracking-widest text-indigo-400 uppercase mb-4">
             CORE SERVICES
           </div>
@@ -40,17 +46,17 @@ export default function Services({ services, onServiceSelect }: ServicesProps) {
           <p className="text-neutral-400 font-sans text-sm sm:text-base">
             Expert conversion rate optimization coupled with elite digital craftsmanship to unlock measurable business revenue.
           </p>
-        </div>
+        </motion.div>
 
         {/* 3-Column Responsive Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
           {services.map((service, idx) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.25, delay: idx * 0.06, ease: "easeOut" }}
               whileHover={{ y: -8 }}
               className="relative rounded-2xl bg-neutral-900/40 border border-neutral-800/80 p-8 flex flex-col justify-between overflow-hidden group hover:border-indigo-500/30 transition-all duration-300"
               id={`service-card-${service.id}`}

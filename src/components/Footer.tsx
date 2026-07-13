@@ -1,3 +1,4 @@
+import { motion } from 'motion/react';
 import { Github, Linkedin, Twitter, MessageCircle, ArrowUp } from 'lucide-react';
 import { AuthorSettings } from '../types';
 
@@ -16,7 +17,13 @@ export default function Footer({ name, settings }: FooterProps) {
 
   return (
     <footer id="footer" className="bg-neutral-950 border-t border-neutral-900 py-12 md:py-16">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+      <motion.div
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.25, ease: "easeOut" }}
+        className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row md:items-center md:justify-between gap-8"
+      >
         
         {/* Left Side: Brand & Copyright */}
         <div className="space-y-3">
@@ -119,7 +126,7 @@ export default function Footer({ name, settings }: FooterProps) {
           </button>
         </div>
 
-      </div>
+      </motion.div>
     </footer>
   );
 }

@@ -15,7 +15,13 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16 md:mb-24 flex flex-col items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.25, ease: "easeOut" }}
+          className="text-center max-w-2xl mx-auto mb-16 md:mb-24 flex flex-col items-center"
+        >
           <div className="px-3 py-1 rounded-full bg-neutral-900 border border-neutral-800 text-[10px] font-mono tracking-widest text-indigo-400 uppercase mb-4">
             SOCIAL PROOF
           </div>
@@ -25,17 +31,17 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
           <p className="text-neutral-400 font-sans text-sm sm:text-base">
             Honest feedback and verified metrics from high-growth business leaders who unlocked massive conversion spikes.
           </p>
-        </div>
+        </motion.div>
 
         {/* 3-Card Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="testimonials-grid">
           {testimonials.map((testimonial, idx) => (
             <motion.div
               key={testimonial.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.25, delay: idx * 0.06, ease: "easeOut" }}
               className="relative rounded-2xl bg-neutral-900/30 border border-neutral-800 p-8 flex flex-col justify-between group hover:border-indigo-500/20 hover:bg-neutral-900/55 transition-all duration-300 shadow-lg"
               id={`testimonial-card-${testimonial.id}`}
             >
