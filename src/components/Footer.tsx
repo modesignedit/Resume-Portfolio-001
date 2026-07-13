@@ -36,14 +36,14 @@ export default function Footer({ name, settings }: FooterProps) {
         {/* Right Side: Social Media & Legal Placeholders */}
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 sm:gap-8">
           {/* Social Links */}
-          <div className="flex items-center space-x-5">
+          <div className="flex items-center space-x-2">
             {settings?.linkedin && (
               <a
                 href={settings.linkedin}
                 target="_blank"
                 referrerPolicy="no-referrer"
                 rel="noopener noreferrer"
-                className="text-neutral-500 hover:text-indigo-400 transition-colors"
+                className="w-11 h-11 inline-flex items-center justify-center text-neutral-500 hover:text-indigo-400 transition-colors rounded-lg hover:bg-neutral-900"
                 aria-label="LinkedIn"
                 title="LinkedIn Profile"
               >
@@ -57,7 +57,7 @@ export default function Footer({ name, settings }: FooterProps) {
                 target="_blank"
                 referrerPolicy="no-referrer"
                 rel="noopener noreferrer"
-                className="text-neutral-500 hover:text-green-400 transition-colors"
+                className="w-11 h-11 inline-flex items-center justify-center text-neutral-500 hover:text-green-400 transition-colors rounded-lg hover:bg-neutral-900"
                 aria-label="WhatsApp"
                 title="WhatsApp Direct Chat"
               >
@@ -71,7 +71,7 @@ export default function Footer({ name, settings }: FooterProps) {
                 target="_blank"
                 referrerPolicy="no-referrer"
                 rel="noopener noreferrer"
-                className="text-neutral-500 hover:text-white transition-colors"
+                className="w-11 h-11 inline-flex items-center justify-center text-neutral-500 hover:text-white transition-colors rounded-lg hover:bg-neutral-900"
                 aria-label="Twitter / X"
                 title="Twitter / X Profile"
               >
@@ -84,7 +84,7 @@ export default function Footer({ name, settings }: FooterProps) {
               target="_blank"
               referrerPolicy="no-referrer"
               rel="noopener noreferrer"
-              className="text-neutral-500 hover:text-indigo-400 transition-colors"
+              className="w-11 h-11 inline-flex items-center justify-center text-neutral-500 hover:text-indigo-400 transition-colors rounded-lg hover:bg-neutral-900"
               aria-label="GitHub"
               title="GitHub Profile"
             >

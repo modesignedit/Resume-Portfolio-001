@@ -776,7 +776,7 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
-                    className="fixed inset-x-0 top-[73px] bottom-0 z-40 bg-neutral-950/98 backdrop-blur-md border-t border-neutral-900 md:hidden flex flex-col justify-between overflow-y-auto"
+                    className="fixed inset-x-0 top-[73px] bottom-0 z-[60] bg-neutral-950/98 backdrop-blur-md border-t border-neutral-900 md:hidden flex flex-col justify-between overflow-y-auto"
                   >
                     <div className="p-6 space-y-6">
                       <div>
@@ -1882,7 +1882,7 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
             initial={{ opacity: 0, y: 40, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-6 right-6 z-[110] flex items-center space-x-2.5 px-4.5 py-3.5 rounded-2xl border bg-neutral-900 shadow-2xl"
+            className="fixed bottom-4 left-4 right-4 sm:left-auto sm:bottom-6 sm:right-6 z-[110] flex items-center space-x-2.5 px-4.5 py-3.5 rounded-2xl border bg-neutral-900 shadow-2xl sm:max-w-sm"
             style={{
               borderColor: toast.type === 'error' ? 'rgba(239, 68, 68, 0.3)' : toast.type === 'info' ? 'rgba(99, 102, 241, 0.3)' : 'rgba(16, 185, 129, 0.3)'
             }}

@@ -32,9 +32,8 @@ html {
   }
 }
 
-/* ponytail: safe-area for notch devices */
-.fixed, .sticky {
-  padding-top: env(safe-area-inset-top, 0);
+/* ponytail: safe-area for notch devices — navbar + admin header only */
+#navbar, #admin-master-pane header {
   padding-left: env(safe-area-inset-left, 0);
   padding-right: env(safe-area-inset-right, 0);
 }
