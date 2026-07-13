@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, ArrowRight, Layers } from 'lucide-react';
+import { Menu, X, ArrowRight, Layers, Sun, Moon } from 'lucide-react';
 
 interface NavbarProps {
   name: string;
   onCtaClick: () => void;
   onAdminToggle?: () => void;
+  theme?: string;
+  onToggleTheme?: () => void;
 }
 
-export default function Navbar({ name, onCtaClick, onAdminToggle }: NavbarProps) {
+export default function Navbar({ name, onCtaClick, onAdminToggle, theme, onToggleTheme }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -66,7 +68,7 @@ export default function Navbar({ name, onCtaClick, onAdminToggle }: NavbarProps)
         </div>
 
         {/* Center Desktop Navigation */}
-        <div className="hidden lg:flex items-center space-x-8" id="nav-links">
+        <div className="hidden lg:flex items-center space-x-6" id="nav-links">
           <button
             onClick={() => scrollToSection('services')}
             className="text-neutral-400 hover:text-white font-sans text-sm font-medium transition-colors cursor-pointer"
@@ -85,6 +87,15 @@ export default function Navbar({ name, onCtaClick, onAdminToggle }: NavbarProps)
           >
             Testimonials
           </button>
+          {onToggleTheme && (
+            <button
+              onClick={onToggleTheme}
+              className="p-2 rounded-lg bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-700 transition-all cursor-pointer"
+              title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            </button>
+          )}
           {onAdminToggle && (
             <button
               onClick={onAdminToggle}
@@ -157,6 +168,18 @@ export default function Navbar({ name, onCtaClick, onAdminToggle }: NavbarProps)
                 className="text-left text-indigo-400 hover:text-indigo-300 font-mono text-sm py-1 transition-colors flex items-center gap-1"
               >
                 <span>⚡ Author Console</span>
+              </button>
+            )}
+            {onToggleTheme && (
+              <button
+                onClick={() => {
+                  onToggleTheme();
+                  setIsOpen(false);
+                }}
+                className="w-full flex items-center justify-center space-x-2 py-3 px-4 rounded-xl bg-neutral-900/50 border border-neutral-800/60 text-neutral-400 hover:text-white font-semibold text-xs transition-all cursor-pointer"
+              >
+                {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+                <span>{theme === 'dark' ? 'Light Mode' : 'Dark Mode'}</span>
               </button>
             )}
             <button

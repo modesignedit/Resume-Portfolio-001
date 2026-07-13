@@ -12,7 +12,17 @@ import { getSettings, getServices, getProjects, getTestimonials } from './mock';
 import { AuthorSettings, Service, Project, Testimonial } from './types';
 import { ShieldCheck, Sparkles } from 'lucide-react';
 
+function useTheme() {
+  const [theme, setThemeState] = useState(() => localStorage.getItem('chioma_theme') || 'dark');
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('chioma_theme', theme);
+  }, [theme]);
+  return [theme, () => setThemeState(t => t === 'dark' ? 'light' : 'dark')] as const;
+}
+
 export default function App() {
+  const [theme, toggleTheme] = useTheme();
   const [selectedService, setSelectedService] = useState('');
   const [adminActive, setAdminActive] = useState(false);
 
@@ -71,6 +81,8 @@ export default function App() {
         name={settings.name} 
         onCtaClick={handleCtaClick} 
         onAdminToggle={() => setAdminActive(true)} 
+        theme={theme}
+        onToggleTheme={toggleTheme}
       />
 
       {/* Hero Section */}
