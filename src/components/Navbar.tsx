@@ -56,12 +56,9 @@ export default function Navbar({ name, onCtaClick, onAdminToggle, theme, onToggl
         {/* Brand Logo */}
         <div
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="flex items-center space-x-2.5 cursor-pointer group"
+          className="cursor-pointer group"
           id="nav-logo"
         >
-          <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-black text-sm shadow-indigo-500/20 shadow-md group-hover:bg-indigo-500 transition-colors">
-            {name ? name.charAt(0) : 'V'}
-          </div>
           <span className="font-sans font-bold text-lg tracking-tight text-white flex items-center gap-1.5 uppercase">
             {name || "CHIOMA ADEBAYO"} <span className="text-indigo-500 text-[10px] font-mono font-normal tracking-widest hidden sm:inline">// WORKSPACE</span>
           </span>
