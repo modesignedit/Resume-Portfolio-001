@@ -980,9 +980,9 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
 
                     {/* Funnel Efficiency Chart Demo (Using structural styling) */}
                     <div className="p-6 md:p-8 rounded-2xl bg-neutral-900/20 border border-neutral-800 space-y-6">
-                      <div className="flex items-center justify-between border-b border-neutral-900 pb-4">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-neutral-900 pb-4">
                         <div className="flex items-center space-x-2">
-                          <TrendingUp className="w-5 h-5 text-indigo-400" />
+                          <TrendingUp className="w-5 h-5 text-indigo-400 shrink-0" />
                           <span className="text-xs font-mono font-bold text-white uppercase tracking-wider">Conversion Optimization Funnel</span>
                         </div>
                         <span className="text-[10px] font-mono text-neutral-500">EFFICIENCY METRIC: {analytics.funnelEfficiency}%</span>
