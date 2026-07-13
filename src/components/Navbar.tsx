@@ -90,7 +90,7 @@ export default function Navbar({ name, onCtaClick, onAdminToggle, theme, onToggl
           {onToggleTheme && (
             <button
               onClick={onToggleTheme}
-              className="p-2 rounded-lg bg-neutral-900 border border-neutral-800 text-indigo-400 hover:text-indigo-300 hover:border-indigo-500/40 hover:bg-indigo-950/20 transition-all cursor-pointer"
+              className="p-2 rounded-lg bg-neutral-900 border border-neutral-800 text-indigo-400 hover:text-indigo-300 hover:border-indigo-500/40 hover:bg-indigo-950/20 shadow-sm shadow-indigo-500/5 transition-all cursor-pointer"
               title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
             >
               {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
