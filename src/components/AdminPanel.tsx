@@ -102,7 +102,7 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
         <div className="flex items-center gap-2 sm:gap-3 min-w-0">
           {authenticated && (
             <button onClick={() => setMobileMenuOpen(o => !o)}
-              className="md:hidden p-2 rounded-xl bg-neutral-900 border border-neutral-800 text-neutral-300 hover:text-white transition-colors cursor-pointer shrink-0">
+              className="lg:hidden p-2 rounded-xl bg-neutral-900 border border-neutral-800 text-neutral-300 hover:text-white transition-colors cursor-pointer shrink-0">
               {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
             </button>
           )}
@@ -182,10 +182,10 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
             </motion.div>
           ) : (
             <motion.div key="dashboard" initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-              className="flex-1 flex flex-col md:flex-row overflow-hidden">
+              className="flex-1 flex flex-col lg:flex-row overflow-hidden">
 
               {/* Desktop sidebar */}
-              <aside className="hidden md:flex md:w-56 lg:w-64 md:border-r border-neutral-900 bg-neutral-950 flex-col justify-between shrink-0">
+              <aside className="hidden lg:flex lg:w-64 lg:border-r border-neutral-900 bg-neutral-950 flex-col justify-between shrink-0">
                 <div className="p-6 space-y-6">
                   <div>
                     <span className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest">Workspace</span>
@@ -209,7 +209,7 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
               <AnimatePresence>
                 {mobileMenuOpen && (
                   <motion.div key="backdrop" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-                    className="fixed inset-0 top-[73px] z-[59] bg-black/60 md:hidden" onClick={() => setMobileMenuOpen(false)} />
+                    className="fixed inset-0 top-[73px] z-[59] bg-black/60 lg:hidden" onClick={() => setMobileMenuOpen(false)} />
                 )}
               </AnimatePresence>
 
@@ -218,7 +218,7 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
                 {mobileMenuOpen && (
                   <motion.div key="drawer" initial={{ opacity: 0, x: -300 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -300 }}
                     transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                    className="fixed left-0 top-[73px] bottom-0 w-72 z-[60] bg-neutral-950/98 backdrop-blur-md border-r border-neutral-900 md:hidden flex flex-col justify-between overflow-y-auto shadow-2xl">
+                    className="fixed left-0 top-[73px] bottom-0 w-72 z-[60] bg-neutral-950/98 backdrop-blur-md border-r border-neutral-900 lg:hidden flex flex-col justify-between overflow-y-auto shadow-2xl">
                     <div className="p-6 space-y-6">
                       <div>
                         <span className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest">Workspace</span>
