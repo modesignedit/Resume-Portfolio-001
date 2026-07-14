@@ -3,12 +3,12 @@ import { HERO_DATA, SERVICES_DATA, PROJECTS_DATA, TESTIMONIALS_DATA } from './da
 
 // Key names for local storage persistence
 const KEYS = {
-  SETTINGS: 'nigeria_author_settings_v2',
-  SERVICES: 'nigeria_services_v2',
-  PROJECTS: 'nigeria_projects_v2',
-  TESTIMONIALS: 'nigeria_testimonials_v2',
-  LEADS: 'nigeria_captured_leads_v2',
-  SESSION: 'nigeria_admin_session_v2'
+  SETTINGS: 'portfolio_author_settings',
+  SERVICES: 'portfolio_services',
+  PROJECTS: 'portfolio_projects',
+  TESTIMONIALS: 'portfolio_testimonials',
+  LEADS: 'portfolio_leads',
+  SESSION: 'portfolio_admin_session'
 };
 
 // Admin credentials

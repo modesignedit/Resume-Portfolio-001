@@ -30,7 +30,7 @@ export default function ContactForm({ selectedService, onClearSelectedService, o
   useEffect(() => {
     if (selectedService) {
       setBrief((prev) => {
-        const prefix = `Hi ${authorName || 'Chioma'}, I am interested in your "${selectedService}" package. `;
+        const prefix = `Hi ${authorName || 'your consultant'}, I am interested in your "${selectedService}" package. `;
         if (prev.includes(prefix)) return prev;
         return prefix + prev;
       });
@@ -318,7 +318,7 @@ export default function ContactForm({ selectedService, onClearSelectedService, o
                   <div className="flex items-center justify-center space-x-2 pt-2 border-t border-neutral-950">
                     <ShieldCheck className="w-4 h-4 text-indigo-400" />
                     <p className="text-[10px] font-mono text-neutral-500 uppercase tracking-widest text-center">
-                      Your privacy is secure. {authorName || 'Chioma'} replies within 12 business hours.
+                      Your privacy is secure. {authorName || 'your consultant'} replies within 12 business hours.
                     </p>
                   </div>
 
@@ -340,7 +340,7 @@ export default function ContactForm({ selectedService, onClearSelectedService, o
                       Request Dispatched Successfully!
                     </h3>
                     <p className="text-neutral-400 font-sans text-sm max-w-md mx-auto">
-                      Thank you, <span className="text-white font-bold">{name}</span>! Your project brief has been securely cataloged. {authorName || 'Chioma'} will review the details and reach out to schedule your CRO assessment.
+                      Thank you, <span className="text-white font-bold">{name}</span>! Your project brief has been securely cataloged. {authorName || 'your consultant'} will review the details and reach out to schedule your CRO assessment.
                     </p>
                   </div>
 

@@ -633,10 +633,10 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
                 <div className="bg-neutral-950 border border-neutral-800/80 p-4 rounded-xl space-y-2 text-left">
                   <div className="flex items-center space-x-2">
                     <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
-                    <span className="text-[10px] font-mono font-bold text-indigo-400 uppercase tracking-wider">Demo Access Credentials</span>
+                    <span className="text-[10px] font-mono font-bold text-indigo-400 uppercase tracking-wider">Admin Access</span>
                   </div>
                   <p className="text-[11px] font-sans text-neutral-400 leading-normal">
-                    Enter the standard real-time credentials below to access management functionalities:
+                    Default credentials — change in <span className="font-mono text-neutral-300">src/mock.ts</span>:
                   </p>
                   <div className="grid grid-cols-2 gap-2 pt-1 font-mono text-[10px] text-neutral-300">
                     <p><span className="text-neutral-500">USER:</span> admin</p>

@@ -13,10 +13,10 @@ import { AuthorSettings, Service, Project, Testimonial } from './types';
 import { ShieldCheck, Sparkles } from 'lucide-react';
 
 function useTheme() {
-  const [theme, setThemeState] = useState(() => localStorage.getItem('chioma_theme') || 'dark');
+  const [theme, setThemeState] = useState(() => localStorage.getItem('portfolio_theme') || 'dark');
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('chioma_theme', theme);
+    localStorage.setItem('portfolio_theme', theme);
   }, [theme]);
   return [theme, () => setThemeState(t => t === 'dark' ? 'light' : 'dark')] as const;
 }
@@ -31,6 +31,23 @@ export default function App() {
   const [services, setServices] = useState<Service[]>(getServices());
   const [projects, setProjects] = useState<Project[]>(getProjects());
   const [testimonials, setTestimonials] = useState<Testimonial[]>(getTestimonials());
+
+  // Sync document title from settings
+  useEffect(() => {
+    const name = settings.name || 'Portfolio';
+    const title = settings.title ? `${name} — ${settings.title}` : name;
+    document.title = title;
+    const desc = document.querySelector('meta[name="description"]');
+    if (desc) desc.setAttribute('content', settings.subheadline || 'Premium portfolio');
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', title);
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', settings.subheadline || 'Premium portfolio');
+    const twTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twTitle) twTitle.setAttribute('content', title);
+    const twDesc = document.querySelector('meta[name="twitter:description"]');
+    if (twDesc) twDesc.setAttribute('content', settings.subheadline || 'Premium portfolio');
+  }, [settings.name, settings.title, settings.subheadline]);
 
   // Function to reload data from mock database in real-time
   const handleDataChanged = () => {

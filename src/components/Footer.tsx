@@ -32,11 +32,11 @@ export default function Footer({ name, settings }: FooterProps) {
               {name ? name.charAt(0) : 'V'}
             </div>
             <span className="font-sans font-black text-sm tracking-tight text-white uppercase">
-              {name || "CHIOMA ADEBAYO"}
+              {name || "YOUR NAME"}
             </span>
           </div>
           <p className="text-neutral-500 font-sans text-xs">
-            © {new Date().getFullYear()} {name || "Chioma Adebayo"}. All rights reserved. Conversion optimization and UI/UX design.
+            © {new Date().getFullYear()} {name || "Your Name"}. All rights reserved.
           </p>
         </div>
 
