@@ -657,7 +657,7 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
             >
               
               {/* Sidebar navigation */}
-              <aside className="hidden md:flex md:w-64 md:border-r border-neutral-900 bg-neutral-950 flex-col justify-between shrink-0">
+              <aside className="hidden md:flex md:w-56 lg:w-64 md:border-r border-neutral-900 bg-neutral-950 flex-col justify-between shrink-0">
                 <div className="p-6 space-y-6">
                   
                   {/* Sidebar title */}
@@ -918,7 +918,7 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
               </AnimatePresence>
 
               {/* Main Content Area */}
-              <main className="flex-1 bg-neutral-950 overflow-y-auto p-4 sm:p-6 md:p-10 space-y-8 sm:space-y-10">
+              <main className="flex-1 bg-neutral-950 overflow-y-auto overflow-x-hidden p-4 sm:p-6 md:p-8 lg:p-10 space-y-8 sm:space-y-10 min-w-0">
                 
                 {/* 1. ANALYTICS & CRO TAB */}
                 {activeTab === 'analytics' && (
@@ -938,7 +938,7 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
                     </div>
 
                     {/* Stats Metric Cards */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
                       
                       {/* Views Card */}
                       <div className="p-5 rounded-2xl bg-neutral-900/30 border border-neutral-800/80 space-y-3">
@@ -979,7 +979,7 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
                     </div>
 
                     {/* Funnel Efficiency Chart Demo (Using structural styling) */}
-                    <div className="p-6 md:p-8 rounded-2xl bg-neutral-900/20 border border-neutral-800 space-y-6">
+                    <div className="p-5 md:p-6 lg:p-8 rounded-2xl bg-neutral-900/20 border border-neutral-800 space-y-6">
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-neutral-900 pb-4">
                         <div className="flex items-center space-x-2">
                           <TrendingUp className="w-5 h-5 text-indigo-400 shrink-0" />
