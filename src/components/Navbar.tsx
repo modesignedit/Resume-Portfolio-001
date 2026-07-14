@@ -65,7 +65,7 @@ export default function Navbar({ name, onCtaClick, onAdminToggle, theme, onToggl
         </div>
 
         {/* Center Desktop Navigation */}
-        <div className="hidden lg:flex items-center space-x-6" id="nav-links">
+        <div className="hidden md:flex items-center space-x-6" id="nav-links">
           <button
             onClick={() => scrollToSection('services')}
             className="text-neutral-400 hover:text-white font-sans text-sm font-medium transition-colors cursor-pointer"
@@ -96,16 +96,16 @@ export default function Navbar({ name, onCtaClick, onAdminToggle, theme, onToggl
           {onAdminToggle && (
             <button
               onClick={onAdminToggle}
-              className="px-2.5 py-1 rounded bg-indigo-950/40 border border-indigo-900 text-indigo-400 hover:text-indigo-300 hover:bg-indigo-950/80 font-mono text-[10px] uppercase tracking-wider transition-all cursor-pointer flex items-center gap-1"
+              className="p-2 rounded-lg bg-indigo-950/40 border border-indigo-900 text-indigo-400 hover:text-indigo-300 hover:bg-indigo-950/80 font-mono text-[10px] uppercase tracking-wider transition-all cursor-pointer flex items-center gap-1"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
-              <span>⚡ Author Console</span>
+              <span>Author Console</span>
             </button>
           )}
         </div>
 
         {/* Right CTA Button (Desktop) */}
-        <div className="hidden lg:block" id="nav-cta-wrapper">
+        <div className="hidden md:block" id="nav-cta-wrapper">
           <button
             onClick={onCtaClick}
             className="relative inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-indigo-600 text-white font-sans font-medium text-sm hover:bg-indigo-500 transition-all shadow-md shadow-indigo-600/10 hover:shadow-indigo-600/30 active:scale-[0.98] cursor-pointer group"
@@ -116,10 +116,10 @@ export default function Navbar({ name, onCtaClick, onAdminToggle, theme, onToggl
           </button>
         </div>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Menu Toggle — hidden on md+ where desktop nav shows */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden text-neutral-400 hover:text-white transition-colors focus:outline-none cursor-pointer"
+          className="md:hidden text-neutral-400 hover:text-white transition-colors focus:outline-none cursor-pointer"
           aria-label="Toggle menu"
           id="nav-mobile-toggle"
         >
@@ -135,7 +135,7 @@ export default function Navbar({ name, onCtaClick, onAdminToggle, theme, onToggl
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-full left-0 w-full bg-neutral-950 border-b border-neutral-900 py-6 px-8 flex flex-col space-y-5 lg:hidden shadow-xl"
+            className="absolute top-full left-0 w-full bg-neutral-950 border-b border-neutral-900 py-6 px-8 flex flex-col space-y-5 md:hidden shadow-xl"
             id="nav-mobile-drawer"
           >
             <button
