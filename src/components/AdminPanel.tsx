@@ -769,14 +769,28 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
 
               </aside>
 
+              {/* Mobile Drawer Backdrop */}
+              <AnimatePresence>
+                {mobileMenuOpen && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="fixed inset-0 top-[73px] z-[59] bg-black/60 md:hidden"
+                    onClick={() => setMobileMenuOpen(false)}
+                  />
+                )}
+              </AnimatePresence>
+
               {/* Mobile Drawer Overlay */}
               <AnimatePresence>
                 {mobileMenuOpen && (
                   <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    className="fixed inset-x-0 top-[73px] bottom-0 z-[60] bg-neutral-950/98 backdrop-blur-md border-t border-neutral-900 md:hidden flex flex-col justify-between overflow-y-auto"
+                    initial={{ opacity: 0, x: -300 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -300 }}
+                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                    className="fixed left-0 top-[73px] bottom-0 w-72 z-[60] bg-neutral-950/98 backdrop-blur-md border-r border-neutral-900 md:hidden flex flex-col justify-between overflow-y-auto shadow-2xl"
                   >
                     <div className="p-6 space-y-6">
                       <div>
