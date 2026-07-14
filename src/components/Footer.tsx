@@ -127,6 +127,9 @@ export default function Footer({ name, settings }: FooterProps) {
         </div>
 
       </motion.div>
+      <p className="text-center text-[8px] font-mono text-neutral-800 tracking-widest mt-6 select-none">
+        A PROJECT BY KNOW NATION LIMITED
+      </p>
     </footer>
   );
 }
