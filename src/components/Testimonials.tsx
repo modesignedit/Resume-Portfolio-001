@@ -46,7 +46,7 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
               id={`testimonial-card-${testimonial.id}`}
             >
               {/* Background decorative quote icon */}
-              <Quote className="absolute right-6 top-6 w-12 h-12 text-neutral-800/20 group-hover:text-indigo-950/20 transition-colors pointer-events-none" />
+              <Quote className="absolute right-6 top-6 w-12 h-12 text-neutral-800/20 group-hover:text-rose-950/20 transition-colors pointer-events-none" />
 
               <div>
                 {/* Five-Star Rating Graphics */}

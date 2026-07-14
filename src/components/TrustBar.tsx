@@ -36,7 +36,7 @@ export default function TrustBar() {
                 className="flex items-center space-x-2 text-neutral-500 hover:text-neutral-300 transition-colors cursor-pointer group"
                 id={`trust-brand-${brand.name.toLowerCase().replace(/\s/g, '-')}`}
               >
-                <BrandIcon className="w-5 h-5 text-neutral-600 group-hover:text-indigo-400 transition-colors" />
+                <BrandIcon className="w-5 h-5 text-neutral-600 group-hover:text-rose-400 transition-colors" />
                 <span className="font-sans font-extrabold text-sm tracking-widest">
                   {brand.name}
                 </span>

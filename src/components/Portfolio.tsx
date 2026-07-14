@@ -76,8 +76,8 @@ export default function Portfolio({ projects, onCtaClick }: PortfolioProps) {
 
                 {/* Floating Metric Highlight (CRO / ROI-first aesthetic as requested) */}
                 <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md border border-neutral-800/80 rounded-xl p-3 flex items-center space-x-3 shadow-lg">
-                  <div className="w-8 h-8 rounded-lg bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center">
-                    <Flame className="w-4 h-4 text-indigo-400" />
+                  <div className="w-8 h-8 rounded-lg bg-rose-600/20 border border-rose-500/30 flex items-center justify-center">
+                    <Flame className="w-4 h-4 text-rose-400" />
                   </div>
                   <div>
                     <p className="text-[9px] font-mono font-medium text-neutral-400 uppercase tracking-wider leading-none mb-0.5">{project.metricLabel}</p>

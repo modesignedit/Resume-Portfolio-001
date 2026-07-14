@@ -35,8 +35,10 @@ export default function Hero({ settings, onCtaClick, onViewWorkClick }: HeroProp
       className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-neutral-950 flex flex-col justify-center min-h-[90vh]"
     >
       {/* Background ambient glows */}
+      <div className="absolute inset-0 bg-textile-diamond pointer-events-none" />
       <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-rose-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-rose-500/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 md:gap-12 lg:gap-16 items-center">
@@ -53,10 +55,10 @@ export default function Hero({ settings, onCtaClick, onViewWorkClick }: HeroProp
             <div className="flex flex-wrap gap-2 items-center">
               <motion.div
                 variants={itemVariants}
-                className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-neutral-900 border border-neutral-800/80 w-fit"
+                className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-neutral-900 border border-rose-500/30 w-fit"
               >
-                <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
-                <span className="text-xs font-mono font-medium text-neutral-300 uppercase tracking-wider">
+                <Sparkles className="w-3.5 h-3.5 text-rose-400" />
+                <span className="text-xs font-mono font-medium text-rose-300 uppercase tracking-wider">
                   Elite Conversion Engineering
                 </span>
               </motion.div>
