@@ -89,6 +89,86 @@ html {
 [data-theme="light"] .bg-gradient-to-b.from-neutral-900\/80 { --tw-gradient-from: #e8e8e8; }
 [data-theme="light"] .scrollbar-thumb\:bg-neutral-800::-webkit-scrollbar-thumb { background: #d4d4d4; }
 
+/* ponytail: remaining missing bg overrides */
+[data-theme="light"] .bg-neutral-900\/55 { background-color: #ebebeb; }
+[data-theme="light"] .bg-neutral-900\/90 { background-color: #e0e0e0; }
+[data-theme="light"] .bg-neutral-950\/50 { background-color: #f0f0f0; }
+[data-theme="light"] .bg-neutral-950\/20 { background-color: #f7f7f7; }
+[data-theme="light"] .bg-neutral-800 { background-color: #e5e5e5; }
+[data-theme="light"] .hover\:bg-neutral-800:hover { background-color: #d4d4d4; }
+[data-theme="light"] .bg-black { background-color: #fafafa; }
+[data-theme="light"] .from-black { --tw-gradient-from: #f0f0f0; }
+[data-theme="light"] .to-black { --tw-gradient-to: #fafafa; }
+[data-theme="light"] .via-black { --tw-gradient-via: #f5f5f5; }
+[data-theme="light"] .to-neutral-950 { --tw-gradient-to: #fafafa; }
+[data-theme="light"] .from-indigo-600 { --tw-gradient-from: #4f46e5; }
+[data-theme="light"] .to-indigo-400 { --tw-gradient-to: #6366f1; }
+/* ponytail: funnel bar colors in light mode */
+[data-theme="light"] .bg-indigo-950 { background-color: #c7d2fe; }
+[data-theme="light"] .bg-indigo-800 { background-color: #a5b4fc; }
+[data-theme="light"] .bg-emerald-500 { background-color: #10b981; }
+/* ponytail: missing text overrides */
+[data-theme="light"] .text-neutral-50 { color: #171717; }
+[data-theme="light"] .bg-indigo-600.text-neutral-50,
+[data-theme="light"] .bg-indigo-600 .text-neutral-50 { color: #fafafa; }
+[data-theme="light"] .text-neutral-600 { color: #a3a3a3; }
+[data-theme="light"] .text-neutral-700 { color: #d4d4d4; }
+[data-theme="light"] .text-neutral-800 { color: #d4d4d4; }
+[data-theme="light"] .text-neutral-800\/20 { color: #d4d4d433; }
+[data-theme="light"] .text-emerald-400 { color: #059669; }
+[data-theme="light"] .text-green-400 { color: #16a34a; }
+[data-theme="light"] .text-red-400 { color: #dc2626; }
+[data-theme="light"] .text-rose-400 { color: #e11d48; }
+[data-theme="light"] .text-rose-300 { color: #f43f5e; }
+[data-theme="light"] .text-rose-950\/20 { color: #e11d4833; }
+[data-theme="light"] .text-indigo-500 { color: #6366f1; }
+/* ponytail: missing border overrides */
+[data-theme="light"] .border-neutral-800\/50 { border-color: #d4d4d480; }
+[data-theme="light"] .border-neutral-700 { border-color: #a3a3a3; }
+[data-theme="light"] .border-indigo-500\/20 { border-color: #818cf833; }
+[data-theme="light"] .border-indigo-500\/25 { border-color: #818cf840; }
+[data-theme="light"] .border-indigo-500\/30 { border-color: #818cf84d; }
+[data-theme="light"] .border-indigo-500\/50 { border-color: #818cf880; }
+[data-theme="light"] .border-indigo-900\/60 { border-color: #c7d2fe99; }
+[data-theme="light"] .border-indigo-600\/5 { border-color: #4f46e50d; }
+[data-theme="light"] .border-emerald-500\/10 { border-color: #10b9811a; }
+[data-theme="light"] .border-emerald-500\/20 { border-color: #10b98133; }
+[data-theme="light"] .border-green-500\/20 { border-color: #22c55e33; }
+[data-theme="light"] .border-red-500\/25 { border-color: #ef444440; }
+[data-theme="light"] .border-red-500\/30 { border-color: #ef44444d; }
+[data-theme="light"] .border-red-500\/40 { border-color: #ef444466; }
+[data-theme="light"] .border-red-900\/40 { border-color: #fca5a566; }
+[data-theme="light"] .border-rose-500\/30 { border-color: #f43f5e4d; }
+/* ponytail: hover state overrides */
+[data-theme="light"] .hover\:border-neutral-800:hover { border-color: #d4d4d4; }
+[data-theme="light"] .hover\:border-indigo-500\/25:hover { border-color: #818cf840; }
+[data-theme="light"] .hover\:bg-red-900\/30:hover { background-color: #fef2f2; }
+[data-theme="light"] .hover\:bg-red-950\/10:hover { background-color: #fef2f2; }
+[data-theme="light"] .hover\:bg-red-950\/20:hover { background-color: #fee2e2; }
+[data-theme="light"] .hover\:text-red-400:hover { color: #dc2626; }
+[data-theme="light"] .hover\:text-green-400:hover { color: #16a34a; }
+[data-theme="light"] .hover\:text-rose-400:hover { color: #e11d48; }
+[data-theme="light"] .hover\:text-indigo-400:hover { color: #6366f1; }
+[data-theme="light"] .hover\:shadow-indigo-600\/20:hover { box-shadow: 0 4px 12px -2px rgba(79,70,229,0.1); }
+[data-theme="light"] .hover\:shadow-indigo-600\/40:hover { box-shadow: 0 6px 16px -2px rgba(79,70,229,0.12); }
+[data-theme="light"] .shadow-indigo-600\/20 { box-shadow: 0 4px 10px -2px rgba(79,70,229,0.06); }
+[data-theme="light"] .shadow-indigo-500\/20 { box-shadow: 0 2px 4px 0 rgb(0 0 0 / 0.05); }
+/* ponytail: admin panel specific */
+[data-theme="light"] .bg-red-950\/40 { background-color: #fef2f2; }
+[data-theme="light"] .bg-red-500\/10 { background-color: #fee2e2; }
+[data-theme="light"] .bg-indigo-600\/10 { background-color: #eef2ff; }
+[data-theme="light"] .bg-indigo-500\/5 { background-color: #eef2ff; }
+[data-theme="light"] .bg-indigo-600\/20 { background-color: #e0e7ff; }
+[data-theme="light"] .bg-indigo-600\/30 { background-color: #c7d2fe; }
+[data-theme="light"] .bg-indigo-900\/5 { background-color: #eef2ff; }
+[data-theme="light"] .bg-rose-600\/20 { background-color: #ffe4e6; }
+[data-theme="light"] .bg-rose-500\/5 { background-color: #fff1f2; }
+[data-theme="light"] .bg-emerald-500\/5 { background-color: #ecfdf5; }
+[data-theme="light"] .bg-emerald-500\/10 { background-color: #d1fae5; }
+[data-theme="light"] .from-indigo-500\/0 { --tw-gradient-from: transparent; }
+[data-theme="light"] .to-indigo-500\/20 { --tw-gradient-to: #e0e7ff; }
+[data-theme="light"] .via-indigo-500\/40 { --tw-gradient-via: #c7d2fe; }
+
 /* ponytail: light theme indigo brand overrides for toggle buttons */
 [data-theme="light"] .text-indigo-400 { color: #404040; }
 [data-theme="light"] .hover\:text-indigo-300:hover { color: #4f46e5; }
@@ -102,9 +182,7 @@ html {
 [data-theme="light"] .hover\:border-indigo-500\/40:hover { border-color: #6366f1; }
 [data-theme="light"] .border-indigo-900\/40 { border-color: #d4d4d4; }
 [data-theme="light"] .border-indigo-900 { border-color: #d4d4d4; }
-[data-theme="light"] .shadow-indigo-500\/20 { box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); }
 [data-theme="light"] .shadow-indigo-600\/10 { box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05); }
-[data-theme="light"] .hover\:shadow-indigo-600\/30:hover { box-shadow: 0 4px 14px -2px rgba(79,70,229,0.12); }
 
 /* ponytail: nigerian textile-inspired diamond motif */
 .bg-textile-diamond {
