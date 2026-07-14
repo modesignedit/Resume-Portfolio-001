@@ -98,7 +98,7 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
 
   return (
     <div className="fixed inset-0 z-50 overflow-hidden bg-neutral-950 flex flex-col" id="admin-master-pane">
-      <header className="border-b border-neutral-900 bg-neutral-950 py-4 px-4 sm:px-6 md:px-10 flex items-center justify-between shrink-0">
+      <header className="border-b border-neutral-900 bg-neutral-950 py-4 px-6 md:px-12 flex items-center justify-between shrink-0">
         <div className="flex items-center gap-2 sm:gap-3 min-w-0">
           {authenticated && (
             <button onClick={() => setMobileMenuOpen(o => !o)}
@@ -260,7 +260,7 @@ export default function AdminPanel({ onClose, onDataChanged }: AdminPanelProps) 
               </AnimatePresence>
 
               {/* Main content */}
-              <main className="flex-1 bg-neutral-950 overflow-y-auto overflow-x-hidden p-4 sm:p-6 md:p-8 lg:p-10 space-y-8 sm:space-y-10 min-w-0">
+              <main className="flex-1 bg-neutral-950 overflow-y-auto overflow-x-hidden px-6 py-4 sm:p-6 md:p-8 lg:p-10 space-y-8 sm:space-y-10 min-w-0">
                 {activeTab === 'analytics' && <AnalyticsTab analytics={analytics} onRefresh={refreshLocalState} />}
                 {activeTab === 'hero' && <HeroTab settings={settings} savingField={savingField} onSave={s => { setSavingField('settings'); setTimeout(() => { saveSettings(s); setSavingField(null); refreshLocalState(); showToast('Settings saved!'); }, 600); }} />}
                 {activeTab === 'services' && <ServicesTab services={services} onAdd={s => { saveServices([...getServices(), s]); refreshLocalState(); showToast('Service added!'); }} onDelete={id => { triggerConfirm('Remove Service', 'Delete this service?', () => { saveServices(getServices().filter(x => x.id !== id)); refreshLocalState(); showToast('Service removed.'); }, 'Remove'); }} />}
